@@ -71,6 +71,9 @@ internal fun App() = AppTheme {
             }
             ) {
             ExtendedFabItem(
+                label = "Something",
+                expanded = isExpanded,
+                index = 0,
                 icon = {
                     Icon(
                         imageVector = Icons.Default.Add,
@@ -82,12 +85,15 @@ internal fun App() = AppTheme {
                 }
             )
             ExtendedFabItem(
+                label = "Something else",
+                index = 1,
                 icon = {
                     Icon(
                         imageVector = Icons.Default.ShoppingCart,
                         contentDescription = null
                     )
                 },
+                expanded = isExpanded,
                 onClick = {
                     // Handle click
                 }
