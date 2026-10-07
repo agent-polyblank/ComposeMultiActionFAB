@@ -17,7 +17,7 @@ plugins {
 mavenPublishing {
     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
     signAllPublications()
-    coordinates("io.github.agent-polyblank", "extendedfab", "1.1.0")
+    coordinates("io.github.agent-polyblank", "extendedfab", "1.2.0")
 
     pom {
         name.set("Extended FAB")
