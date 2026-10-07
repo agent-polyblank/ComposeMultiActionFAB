@@ -42,20 +42,19 @@ fun ExtendedFab(
     icon: @Composable () -> Unit,
     elements: @Composable () -> Unit
 ) {
-
     Column(
         modifier = modifier.padding(16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
+        horizontalAlignment = Alignment.End,
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        AnimatedVisibility(visible = expanded) {
-            Column(
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.spacedBy(16.dp)
-            ) {
-                elements()
-            }
+
+        Column(
+            horizontalAlignment = Alignment.End,
+            verticalArrangement = Arrangement.spacedBy(16.dp)
+        ) {
+            elements()
         }
+
         FloatingActionButton(
             onClick = { onExpandedChange(!expanded) },
             shape = shape,
@@ -69,4 +68,3 @@ fun ExtendedFab(
         }
     }
 }
-
